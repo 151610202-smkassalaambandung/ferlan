@@ -14,14 +14,30 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('testmodel',function(){
+Route::get('testmodel',function()   {
 	$q=App\Post::all();
-	</tr>
 	$t=App\produk::all();
-	</tr>
 	$p=App\pengguna::all();
-	</tr>
 	$s=App\pengaturan::all();
 	return $q.$t.$p.$s;
 
 });
+//percobaan1
+Route::get('/test','MyController@percobaan');
+//percobaan2
+Route::get('/test2','MyController@percobaan2');
+//percobaa3
+Route::get('/saya','MyController@percobaan3');
+//percobaan4
+Route::get('/nama','MyController@percobaan4');
+//percobaan5
+Route::get('/buah','MyController@percobaan5');
+//percobaan6
+Route::get('/buah2','MyController@percobaan6');
+//percobaan7
+Route::get('/tugas','MyController@percobaan7');
+//percobaan8
+Route::get('/binatang','MyController@binatang');
+
+Route::resource('user', 'AdminUserController', ['parameters' => [
+    'user' => 'admin_user']]);
