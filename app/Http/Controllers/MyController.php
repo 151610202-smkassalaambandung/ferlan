@@ -51,9 +51,16 @@ class MyController extends Controller
     	return view('array',compact('buah','makhluk','komputer'));
     }
 
-    public function binatang($makhluk)
+    public function parameter($data)
     {
-    	$makhluk = ['ikan','harimau','kucing','semut'];
-      return view('param',compact('makhluk'));
+    	$all= [ 'buah'=>['Mangga'=>'bali'],
+                         'Jeruk'=>'bali'],
+                         'Apel'=>'malang']];
+                'makhluk'=>['ikan'=>'gabus'],
+                            'kucing'=>,'anggora'],
+                            
+                'komputer'=>['keyboard','monitor','mouse','CPU']];
+        $jenis=$all[$data];
+      return view('param',compact('data','jenis'));
     }
 }

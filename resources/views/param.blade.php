@@ -3,11 +3,11 @@
 <head>
 	<title></title>
 </head>
-<body>
-       <h1>Makhluk Hidup</h1>
-       @foreach($makhluk as $data)
-      {{$data}}<hr>
+<body> 
+      <h1>Daftar :{{$data}}</h1>
+      @foreach($jenis as $data)
+      <li>{{$data}}</li><hr>
       @endforeach
-
+     
 </body>
 </html>

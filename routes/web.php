@@ -37,7 +37,8 @@ Route::get('/buah2','MyController@percobaan6');
 //percobaan7
 Route::get('/tugas','MyController@percobaan7');
 //percobaan8
-Route::get('/binatang','MyController@binatang');
+Route::get('/parameter/{data?}/{data2?}','MyController@parameter');
+//percobaan9
+Route::get('/parameter2/{data}','MyController@parameter');
 
-Route::resource('user', 'AdminUserController', ['parameters' => [
-    'user' => 'admin_user']]);
+
