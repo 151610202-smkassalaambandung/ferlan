@@ -27,7 +27,7 @@ Route::get('/test','MyController@percobaan');
 //percobaan2
 Route::get('/test2','MyController@percobaan2');
 //percobaa3
-Route::get('/saya','MyController@percobaan3');
+Route::get('/saya','MyController@percobaan3'                                                                                                                                                                              );
 //percobaan4
 Route::get('/nama','MyController@percobaan4');
 //percobaan5
@@ -37,8 +37,13 @@ Route::get('/buah2','MyController@percobaan6');
 //percobaan7
 Route::get('/tugas','MyController@percobaan7');
 //percobaan8
-Route::get('/parameter/{data?}/{data2?}','MyController@parameter');
+Route::get('/parameter/{data?}','MyController@parameter');
 //percobaan9
-Route::get('/parameter2/{data}','MyController@parameter');
+Route::get('/param/{data?}/{data2?}','MyController@parameter2');
+//Percobaan
+Route::get('/coba','SiswaController@Percobaan');
+//Percobaan
+Route::get('/post/{post}','SiswaController@show');
+
 
 

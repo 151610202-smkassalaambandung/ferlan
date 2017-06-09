@@ -53,14 +53,31 @@ class MyController extends Controller
 
     public function parameter($data)
     {
-    	$all= [ 'buah'=>['Mangga'=>'bali'],
-                         'Jeruk'=>'bali'],
-                         'Apel'=>'malang']];
-                'makhluk'=>['ikan'=>'gabus'],
-                            'kucing'=>,'anggora'],
-                            
+    	$all= [ 'buah'=>['Mangga','Jeruk','Apel'],
+                'makhluk'=>['ikan','kucing'],
                 'komputer'=>['keyboard','monitor','mouse','CPU']];
         $jenis=$all[$data];
       return view('param',compact('data','jenis'));
+    }
+
+    public function parameter2($data, $data2 = null)
+    {
+        $array=     ['buah'    =>['Mangga'=>['bali','sumatera'],
+                                 'Jeruk'=>['purut','mandarin'],
+                                'Apel'=>['malang','cirebon']],
+                    'binatang' =>['ikan'=>['patin','emas'],
+                                'kucing'=>['anggora','persia']],
+                    'komputer'=>['Asus'=>['123rt','123rw'],
+                                 'Acer'=>['Acv1','Acv2']] 
+                                 ];
+        if ($data){
+            $query = (array_keys($array[$data]));
+        }
+
+        if ($data2){
+            $query = ($array[$data][$data2]);
+        }
+      
+      return view('param',compact('query','data','data2'));
     }
 }
